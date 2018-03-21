@@ -7,7 +7,8 @@
 	"author": "Colton Colcleasure <colshacol@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"test": "jest"
+		"test": "jest",
+		"precommit": "pretty-quick --staged"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.0.0-beta.41",
