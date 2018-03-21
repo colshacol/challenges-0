@@ -4,29 +4,22 @@
 import { subsets } from '../subsets'
 
 it('walks on water', () => {
-  const target = 'water'
-  
-  const expected = [
-    'wa',
-    'wat',
-    'wate',
-    'er',
-    'ter',
-    'ater'
-  ]
-  
-  expect(subsets(target)).toEqual(expected)
+	const target = 'water'
+
+	const expected = ['wa', 'wat', 'wate', 'er', 'ter', 'ater']
+
+	expect(subsets(target)).toEqual(expected)
 })
 
 it('walks on fire', () => {
-  const target = 'flaming torpedo'
-  
-  const expected = [
-    'fl',
-    'fla',
-    'flam',
-    'flami',
-    'flamin',
+	const target = 'flaming torpedo'
+
+	const expected = [
+		'fl',
+		'fla',
+		'flam',
+		'flami',
+		'flamin',
 		'flaming',
 		'flaming ',
 		'flaming t',
@@ -48,7 +41,7 @@ it('walks on fire', () => {
 		'ming torpedo',
 		'aming torpedo',
 		'laming torpedo'
-  ]
-  
-  expect(subsets(target)).toEqual(expected)
+	]
+
+	expect(subsets(target)).toEqual(expected)
 })

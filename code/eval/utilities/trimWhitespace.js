@@ -1,4 +1,3 @@
-
-exports.trimWhitespace = (target) => {
-  return target.replace(/\s/g, '')
+export const trimWhitespace = target => {
+	return target.replace(/\s/g, '')
 }

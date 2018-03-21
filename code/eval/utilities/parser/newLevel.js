@@ -1,3 +1,3 @@
-export const newLevel = (levels) => {
+export const newLevel = levels => {
 	return levels.push([])
 }

@@ -1,4 +1,3 @@
-
 // Write a function called eval, which takes a string and returns a boolean.
 // This string is allowed 6 different characters: 0, 1, &, |, (, and ).
 // eval should evaluate the string as a boolean expression, where 0 is
@@ -9,7 +8,7 @@ import { handleUnacceptableChars } from './utilities/handleUnacceptableChars'
 import { clean } from './utilities/clean'
 import { parser } from './utilities/parser'
 
-export const _eval = (target) => {
+export const _eval = target => {
 	return parser(handleUnacceptableChars(clean(target)))
 }
 

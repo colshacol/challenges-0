@@ -7,9 +7,9 @@ const COND_TOKENS = ['|', '&']
 const BOOL_TOKENS = ['0', '1']
 const TOKENS = [...COND_TOKENS, ...BOOL_TOKENS]
 
-export const register = (_levels) => (token) => {
+export const register = _levels => token => {
 	if (TOKENS.includes(token)) {
-		const push = (v) => index(_levels)(-1).push(v)
+		const push = v => index(_levels)(-1).push(v)
 
 		return firstTruthy([
 			() => token === '0' && push(false),
@@ -18,5 +18,5 @@ export const register = (_levels) => (token) => {
 		])
 	}
 
-	token === ')' && closeLevel(_levels) || token === '(' && newLevel(_levels)
+	;(token === ')' && closeLevel(_levels)) || (token === '(' && newLevel(_levels))
 }

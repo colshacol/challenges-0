@@ -1,4 +1,3 @@
-
 // Generate all subsets of a string.
 // eg: ‘water’ should generate ‘wa’, ‘wat’, ‘wate’ etc
 
@@ -8,12 +7,12 @@ import { edgeChars } from './utilities/edgeChars'
 import { forwards } from './utilities/forwards'
 import { backwards } from './utilities/backwards'
 
-export const subsets = (target) => {
-  const [ first, last ] = edgeChars(target)
+export const subsets = target => {
+	const [first, last] = edgeChars(target)
 	const middle = middleChars(target)
-	
+
 	const f = middle.reduce(forwards(first), [])
 	const b = middle.reduceRight(backwards(last, middle), [])
-  
-  return [ ...f, ...b ]
+
+	return [...f, ...b]
 }
